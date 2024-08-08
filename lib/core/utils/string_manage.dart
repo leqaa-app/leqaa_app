@@ -1,3 +1,5 @@
 class StringManager {
-  static const String text = "";
+  static const kSplashView = '/';
+  static const kOnBoardingView = '/onBoardingView';
+  static const kHomeView = '/homeView';
 }
