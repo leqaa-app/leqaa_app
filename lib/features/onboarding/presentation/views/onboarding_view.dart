@@ -43,7 +43,7 @@ class OnBoardingView extends StatelessWidget {
             TextButton(
               onPressed: () {
                 _storeOnBoardInfo();
-                GoRouter.of(context).go(StringManager.kHomeView);
+                GoRouter.of(context).go(StringManager.kLoginView);
               },
               style: ButtonStyle(
                 padding: WidgetStateProperty.all(EdgeInsets.zero),
@@ -61,7 +61,12 @@ class OnBoardingView extends StatelessWidget {
             ),
           ],
         ),
-        body: const OnboardingViewBody(),
+        body: OnboardingViewBody(
+          onPressedButton: () {
+            _storeOnBoardInfo();
+            controller.next(context);
+          },
+        ),
       ),
     );
   }

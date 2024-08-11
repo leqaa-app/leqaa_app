@@ -8,7 +8,9 @@ import 'package:leqaa/features/onboarding/presentation/views/widgets/custom_butt
 import 'package:leqaa/features/onboarding/presentation/views/widgets/custom_dot_controller_onboarding.dart';
 
 class CustomSliderOnBoarding extends GetView<OnBoardingControllerImpl> {
-  const CustomSliderOnBoarding({super.key});
+  const CustomSliderOnBoarding({super.key, required this.onPressed});
+
+  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -52,13 +54,13 @@ class CustomSliderOnBoarding extends GetView<OnBoardingControllerImpl> {
                 ],
               ),
               const Spacer(),
-              const Row(
+               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Spacer(flex: 6),
                   CustomDotControllerOnBoarding(),
                   Spacer(flex: 4),
-                  CustomButtonOnBoarding(),
+                  CustomButtonOnBoarding(onPressed: onPressed ),
                 ],
               ),
               const SizedBox(height: 32),

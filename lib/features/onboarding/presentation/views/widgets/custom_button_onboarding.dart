@@ -6,14 +6,14 @@ import 'package:leqaa/core/utils/radius_values_managers.dart';
 import 'package:leqaa/features/onboarding/data/controller/onboarding_controller.dart';
 
 class CustomButtonOnBoarding extends GetView<OnBoardingControllerImpl> {
-  const CustomButtonOnBoarding({super.key});
+  const CustomButtonOnBoarding({super.key, required this.onPressed});
+
+  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {
-        controller.next();
-      },
+      onPressed: onPressed,
       style: ButtonStyle(
         padding: WidgetStateProperty.all(EdgeInsets.zero),
         minimumSize: WidgetStateProperty.all(const Size(50, 50)),

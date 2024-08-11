@@ -37,7 +37,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     Future.delayed(const Duration(seconds: 2)).then((value) => context.go(
         isViewed != 0
             ? StringManager.kOnBoardingView
-            : StringManager.kHomeView));
+            : StringManager.kLoginView));
 
     super.initState();
   }

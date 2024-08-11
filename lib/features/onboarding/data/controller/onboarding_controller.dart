@@ -1,11 +1,11 @@
-import 'dart:developer';
-
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
+import 'package:leqaa/core/utils/string_manage.dart';
 import 'package:leqaa/features/onboarding/data/datasource/static/static.dart';
 
 abstract class OnBoardingController extends GetxController {
-  next();
+  next(BuildContext context);
   void onPageChanged(int index);
 }
 
@@ -14,12 +14,11 @@ class OnBoardingControllerImpl extends OnBoardingController {
   int currentIndex = 0;
 
   @override
-  void next() {
+  void next(BuildContext context) {
     currentIndex++;
 
     if (currentIndex > onBoardingList.length - 1) {
-      log('go to login');
-      // Get.offNamed('/login');
+      GoRouter.of(context).go(StringManager.kLoginView);
     } else {
       pageController.animateToPage(currentIndex,
           duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
