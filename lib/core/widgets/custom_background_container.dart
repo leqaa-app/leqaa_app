@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:leqaa/core/utils/assets.dart';
 import 'package:leqaa/core/utils/color_manager.dart';
 import 'package:leqaa/core/utils/height_values_managers.dart';
@@ -12,11 +13,13 @@ class CustomBackgroundContainer extends StatelessWidget {
     required this.child,
     this.height = HeightValuesManagers.kHeight138,
     this.logo = false,
+    this.iconBack = false,
   });
 
   final Widget child;
   final double? height;
   final bool? logo;
+  final bool? iconBack;
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +29,7 @@ class CustomBackgroundContainer extends StatelessWidget {
           Container(
             height: height,
             width: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 23),
             decoration: const BoxDecoration(
               color: ColorManager.mainColor,
               borderRadius: BorderRadius.vertical(
@@ -36,10 +40,35 @@ class CustomBackgroundContainer extends StatelessWidget {
                 ? Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SvgPicture.asset(
-                        Assets.imagesLeqaaLogo,
-                        width: WidthValuesManagers.kWidth100,
-                        height: HeightValuesManagers.kHeight75,
+                      iconBack == true
+                          ? Row(
+                              children: [
+                                IconButton(
+                                  onPressed: () => GoRouter.of(context).pop(),
+                                  style: TextButton.styleFrom(
+                                    padding: EdgeInsets.zero,
+                                    minimumSize: Size.zero,
+                                    tapTargetSize:
+                                        MaterialTapTargetSize.shrinkWrap,
+                                  ),
+                                  icon: const Icon(
+                                    Icons.arrow_back_ios,
+                                    size: 24,
+                                    color: ColorManager.whiteColor,
+                                  ),
+                                ),
+                              ],
+                            )
+                          : const SizedBox(),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SvgPicture.asset(
+                            Assets.imagesLeqaaLogo,
+                            width: WidthValuesManagers.kWidth100,
+                            height: HeightValuesManagers.kHeight75,
+                          ),
+                        ],
                       ),
                     ],
                   )

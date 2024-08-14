@@ -54,4 +54,8 @@ class Assets {
   /// Assets for imagesLock
   /// assets/images/lock.png
   static const String imagesLock = "assets/images/lock.png";
+
+  /// Assets for imagesUserEdit
+  /// assets/images/user-edit.png
+  static const String imagesUserEdit = 'assets/images/user-edit.png';
 }
