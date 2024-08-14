@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:leqaa/core/utils/assets.dart';
+import 'package:leqaa/core/utils/height_values_managers.dart';
 import 'package:leqaa/core/utils/string_manage.dart';
+import 'package:leqaa/core/utils/width_values_managers.dart';
 import 'package:leqaa/main.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -50,12 +53,11 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Center(
-        child: Image.asset(
-          Assets.imagesLeqaaLogo,
-          width: animation.value * 200,
-        ),
+    return Center(
+      child: SvgPicture.asset(
+        Assets.imagesLeqaaLogo,
+        height: animation.value * HeightValuesManagers.kHeight113,
+        width: animation.value * WidthValuesManagers.kWidth152,
       ),
     );
   }

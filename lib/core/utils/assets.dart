@@ -32,8 +32,8 @@ class Assets {
 
   /// Assets for imagesLeqaaLogo
   /// assets/images/leqaa_logo.svg
-  // static const String imagesLeqaaLogo = "assets/images/leqaa_logo.svg";
-  static const String imagesLeqaaLogo = 'assets/images/logo.png';
+  static const String imagesLeqaaLogo = "assets/images/leqaa_logo.svg";
+  // static const String imagesLeqaaLogo = 'assets/images/logo.png';
 
   /// Assets for imagesOrganizer
   /// assets/images/organizer.svg
@@ -46,4 +46,12 @@ class Assets {
   /// Assets for imagesStudent
   /// assets/images/student.svg
   static const String imagesStudent = "assets/images/student.svg";
+
+  /// Assets for imagesSms
+  /// assets/images/sms.png
+  static const String imagesSms = "assets/images/sms.png";
+
+  /// Assets for imagesLock
+  /// assets/images/lock.png
+  static const String imagesLock = "assets/images/lock.png";
 }

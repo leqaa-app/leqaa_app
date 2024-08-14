@@ -19,7 +19,7 @@ abstract class Styles {
 
   static const TextStyle styleRegular12 = TextStyle(
     color: ColorManager.mainColor,
-    fontSize: FontSizeManager.s16,
+    fontSize: FontSizeManager.s12,
     fontWeight: FontWeightManager.regular,
     fontFamily: FontType.kAlmarai,
   );
