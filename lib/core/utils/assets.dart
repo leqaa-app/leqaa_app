@@ -48,14 +48,18 @@ class Assets {
   static const String imagesStudent = "assets/images/student.svg";
 
   /// Assets for imagesSms
-  /// assets/images/sms.png
-  static const String imagesSms = "assets/images/sms.png";
+  /// assets/images/sms.svg
+  static const String imagesEmail = "assets/images/sms.svg";
 
   /// Assets for imagesLock
-  /// assets/images/lock.png
-  static const String imagesLock = "assets/images/lock.png";
+  /// assets/images/lock.svg
+  static const String imagesLock = "assets/images/lock.svg";
 
   /// Assets for imagesUserEdit
-  /// assets/images/user-edit.png
-  static const String imagesUserEdit = 'assets/images/user-edit.png';
+  /// assets/images/user-edit.svg
+  static const String imagesUserEdit = 'assets/images/user-edit.svg';
+
+  /// Assets for imagesPhone
+  /// assets/images/phone.svg
+  static const String imagesPhone = 'assets/images/phone.svg';
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:leqaa/core/utils/color_manager.dart';
 import 'package:leqaa/core/utils/styles.dart';
 
@@ -9,14 +10,14 @@ class CustomFormTextField extends StatelessWidget {
     this.onChanged,
     this.obscureText = false,
     required this.textTitle,
-    this.suffixIcon,
+    this.icon,
     this.prefixIcon,
   });
 
   final Function(String)? onChanged;
   final String textTitle;
   final String? hinText;
-  final Widget? suffixIcon;
+  final String? icon;
   final Widget? prefixIcon;
 
   final bool? obscureText;
@@ -46,7 +47,19 @@ class CustomFormTextField extends StatelessWidget {
             hintText: hinText,
             hintTextDirection: TextDirection.rtl,
             hintStyle: Styles.styleLight12,
-            suffixIcon: suffixIcon,
+            suffixIcon: icon == null
+                ? null
+                : Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset(
+                        icon!,
+                        width: 24,
+                        height: 24,
+                      ),
+                    ],
+                  ),
             prefixIcon: prefixIcon,
             // focusedBorder: OutlineInputBorder(
             //   borderSide: const BorderSide(

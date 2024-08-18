@@ -36,31 +36,30 @@ class CustomBackgroundContainer extends StatelessWidget {
                 bottom: Radius.circular(RadiusValuesManagers.kRadius64),
               ),
             ),
-            child: logo == true
-                ? Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      iconBack == true
-                          ? Row(
-                              children: [
-                                IconButton(
-                                  onPressed: () => GoRouter.of(context).pop(),
-                                  style: TextButton.styleFrom(
-                                    padding: EdgeInsets.zero,
-                                    minimumSize: Size.zero,
-                                    tapTargetSize:
-                                        MaterialTapTargetSize.shrinkWrap,
-                                  ),
-                                  icon: const Icon(
-                                    Icons.arrow_back_ios,
-                                    size: 24,
-                                    color: ColorManager.whiteColor,
-                                  ),
-                                ),
-                              ],
-                            )
-                          : const SizedBox(),
-                      Column(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                iconBack == true
+                    ? Row(
+                        children: [
+                          IconButton(
+                            onPressed: () => GoRouter.of(context).pop(),
+                            style: TextButton.styleFrom(
+                              padding: EdgeInsets.zero,
+                              minimumSize: Size.zero,
+                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            ),
+                            icon: const Icon(
+                              Icons.arrow_back_ios,
+                              size: 24,
+                              color: ColorManager.whiteColor,
+                            ),
+                          ),
+                        ],
+                      )
+                    : const SizedBox(),
+                logo == true
+                    ? Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SvgPicture.asset(
@@ -69,10 +68,13 @@ class CustomBackgroundContainer extends StatelessWidget {
                             height: HeightValuesManagers.kHeight75,
                           ),
                         ],
+                      )
+                    : const SizedBox(
+                        width: WidthValuesManagers.kWidth100,
+                        height: HeightValuesManagers.kHeight75,
                       ),
-                    ],
-                  )
-                : null,
+              ],
+            ),
           ),
           child,
         ],

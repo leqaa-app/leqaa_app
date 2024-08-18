@@ -5,7 +5,7 @@ import 'package:leqaa/core/utils/color_manager.dart';
 import 'package:leqaa/core/utils/height_values_managers.dart';
 import 'package:leqaa/core/utils/string_manage.dart';
 import 'package:leqaa/core/utils/styles.dart';
-import 'package:leqaa/features/auth/presentation/views/widgets/custom_auth_submit_button.dart';
+import 'package:leqaa/features/auth/presentation/views/widgets/custom_submit_button.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/custom_dividing_line_view.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/custom_form_text_field.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/custom_option_button.dart';
@@ -63,7 +63,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                       },
                       textTitle: 'البريد الالكتروني',
                       hinText: 'الايميل الجامعي او رقم الهاتف',
-                      suffixIcon: Image.asset(Assets.imagesSms),
+                      icon: Assets.imagesEmail,
                     ),
                     const SizedBox(height: 12),
                     CustomFormTextField(
@@ -73,7 +73,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                       },
                       textTitle: 'كلمة المرور',
                       hinText: 'كلمة المرور',
-                      suffixIcon: Image.asset(Assets.imagesLock),
+                      icon: Assets.imagesLock,
                       prefixIcon: IconButton(
                         onPressed: () {
                           setState(() {
@@ -92,7 +92,8 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                     Row(
                       children: [
                         InkWell(
-                          onTap: () {},
+                          onTap: () => GoRouter.of(context)
+                              .push(StringManager.kForgetPasswordView),
                           child: Text(
                             'هل نسيت كلمة المرور؟',
                             style: Styles.styleLight12.copyWith(
@@ -104,7 +105,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                       ],
                     ),
                     const SizedBox(height: 16),
-                    const CustomAuthSubmitButton(titleButton: 'تسجيل الدخول'),
+                    const CustomSubmitButton(titleButton: 'تسجيل الدخول'),
                   ],
                 ),
                 const SizedBox(height: 22),

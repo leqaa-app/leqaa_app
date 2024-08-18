@@ -4,8 +4,8 @@ import 'package:leqaa/core/utils/assets.dart';
 import 'package:leqaa/core/utils/color_manager.dart';
 import 'package:leqaa/core/utils/height_values_managers.dart';
 import 'package:leqaa/core/utils/styles.dart';
-import 'package:leqaa/features/auth/presentation/views/widgets/custom_auth_submit_button.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/custom_form_text_field.dart';
+import 'package:leqaa/features/auth/presentation/views/widgets/custom_submit_button.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/custom_text_button_nav.dart';
 
 class SignUpViewBody extends StatefulWidget {
@@ -46,7 +46,13 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                     },
                     textTitle: 'اسم المستخدم',
                     hinText: 'الاسم',
-                    suffixIcon: Image.asset(Assets.imagesUserEdit),
+                    icon: Assets.imagesUserEdit,
+                  ),
+                  const SizedBox(height: 12),
+                  const CustomFormTextField(
+                    textTitle: 'رقم الهاتف',
+                    hinText: 'رقم الهاتف',
+                    icon: Assets.imagesPhone,
                   ),
                   const SizedBox(height: 12),
                   CustomFormTextField(
@@ -55,7 +61,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                     },
                     textTitle: 'البريد الالكتروني',
                     hinText: 'الايميل الجامعي او رقم الهاتف',
-                    suffixIcon: Image.asset(Assets.imagesSms),
+                    icon: Assets.imagesEmail,
                   ),
                   const SizedBox(height: 12),
                   CustomFormTextField(
@@ -65,7 +71,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                     },
                     textTitle: 'كلمة المرور',
                     hinText: 'كلمة المرور',
-                    suffixIcon: Image.asset(Assets.imagesLock),
+                    icon: Assets.imagesLock,
                     prefixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -88,7 +94,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                     },
                     textTitle: 'تأكيد كلمة المرور',
                     hinText: 'كلمة المرور',
-                    suffixIcon: Image.asset(Assets.imagesLock),
+                    icon: Assets.imagesLock,
                     prefixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -103,9 +109,9 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 28),
-                  const CustomAuthSubmitButton(titleButton: 'إنشاء حساب'),
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 22),
+                  const CustomSubmitButton(titleButton: 'إنشاء حساب'),
+                  const SizedBox(height: 7),
                   CustomTextButtonNav(
                     onPressed: () => GoRouter.of(context).pop(),
                     name: 'تسجيل الدخول ',

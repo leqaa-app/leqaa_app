@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:leqaa/core/utils/color_manager.dart';
 import 'package:leqaa/core/utils/styles.dart';
 
-class CustomAuthSubmitButton extends StatelessWidget {
-  const CustomAuthSubmitButton({super.key, required this.titleButton});
+class CustomSubmitButton extends StatelessWidget {
+  const CustomSubmitButton({super.key, required this.titleButton});
 
   final String titleButton;
 
