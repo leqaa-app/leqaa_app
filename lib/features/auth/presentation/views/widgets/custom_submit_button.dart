@@ -3,9 +3,10 @@ import 'package:leqaa/core/utils/color_manager.dart';
 import 'package:leqaa/core/utils/styles.dart';
 
 class CustomSubmitButton extends StatelessWidget {
-  const CustomSubmitButton({super.key, required this.titleButton});
+  const CustomSubmitButton({super.key, required this.titleButton, required this.onPressed});
 
   final String titleButton;
+  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class CustomSubmitButton extends StatelessWidget {
       highlightElevation: 0,
       minWidth: double.infinity,
       height: 56,
-      onPressed: () {},
+      onPressed: onPressed,
       child: Text(
         titleButton,
         style: Styles.styleRegular16,

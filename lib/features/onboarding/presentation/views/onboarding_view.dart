@@ -22,7 +22,6 @@ class OnBoardingView extends StatelessWidget {
     Get.put(OnBoardingControllerImpl());
     return GetBuilder<OnBoardingControllerImpl>(
       builder: (controller) => Scaffold(
-        backgroundColor: ColorManager.whiteColor,
         appBar: AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: ColorManager.mainColor,

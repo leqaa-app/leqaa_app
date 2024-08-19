@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:leqaa/core/utils/color_manager.dart';
 import 'package:leqaa/core/utils/height_values_managers.dart';
 import 'package:leqaa/core/widgets/custom_background_container.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/sign_up_view_body.dart';
@@ -10,7 +9,6 @@ class SignUpView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: ColorManager.whiteColor,
       body: CustomBackgroundContainer(
         logo: true,
         iconBack: true,

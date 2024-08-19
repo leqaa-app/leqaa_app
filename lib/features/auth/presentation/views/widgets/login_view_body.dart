@@ -5,11 +5,11 @@ import 'package:leqaa/core/utils/color_manager.dart';
 import 'package:leqaa/core/utils/height_values_managers.dart';
 import 'package:leqaa/core/utils/string_manage.dart';
 import 'package:leqaa/core/utils/styles.dart';
-import 'package:leqaa/features/auth/presentation/views/widgets/custom_submit_button.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/custom_dividing_line_view.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/custom_form_text_field.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/custom_option_button.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/custom_social_login_button.dart';
+import 'package:leqaa/features/auth/presentation/views/widgets/custom_submit_button.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/custom_text_button_nav.dart';
 
 class LoginViewBody extends StatefulWidget {
@@ -105,7 +105,10 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                       ],
                     ),
                     const SizedBox(height: 16),
-                    const CustomSubmitButton(titleButton: 'تسجيل الدخول'),
+                    CustomSubmitButton(
+                      titleButton: 'تسجيل الدخول',
+                      onPressed: () {},
+                    ),
                   ],
                 ),
                 const SizedBox(height: 22),

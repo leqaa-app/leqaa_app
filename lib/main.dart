@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leqaa/core/utils/app_router.dart';
+import 'package:leqaa/core/utils/color_manager.dart';
 import 'package:leqaa/core/utils/string_manage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -21,6 +22,7 @@ class LeqaaApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Leqaa',
+      theme: ThemeData(scaffoldBackgroundColor: ColorManager.whiteColor),
       routerConfig: AppRouter.router,
     );
   }

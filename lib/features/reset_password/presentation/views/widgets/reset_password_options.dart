@@ -35,7 +35,7 @@ class _ResetPasswordOptionsState extends State<ResetPasswordOptions> {
         CustomSelectedOption(
           isSelected: isSelected,
           title: 'عن طريق ال SMS',
-          subTitle: '+201*******00',
+          subTitle: '\u202A+201*******00\u202C',
           icon: Assets.imagesPhone,
           onTap: _toggleSelection,
         ),
@@ -43,7 +43,7 @@ class _ResetPasswordOptionsState extends State<ResetPasswordOptions> {
         CustomSelectedOption(
           isSelected: !isSelected,
           title: 'عن طريق الايميل',
-          subTitle: '*******@gmail.com',
+          subTitle: '\u202A*******@gmail.com\u202C',
           icon: Assets.imagesEmail,
           onTap: _toggleSelection,
         ),

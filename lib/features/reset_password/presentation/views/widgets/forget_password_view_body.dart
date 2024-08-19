@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:leqaa/core/utils/assets.dart';
+import 'package:leqaa/core/utils/string_manage.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/custom_submit_button.dart';
 import 'package:leqaa/features/reset_password/presentation/views/widgets/reset_password_options.dart';
 
@@ -23,7 +25,12 @@ class ForgetPasswordViewBody extends StatelessWidget {
             const SizedBox(height: 48),
             const ResetPasswordOptions(),
             const SizedBox(height: 24),
-            const CustomSubmitButton(titleButton: 'تأكيد'),
+            CustomSubmitButton(
+              titleButton: 'تأكيد',
+              onPressed: () {
+                GoRouter.of(context).push(StringManager.kVerifyCodeView);
+              },
+            ),
           ],
         ),
       ),

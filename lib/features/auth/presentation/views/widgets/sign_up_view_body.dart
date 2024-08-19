@@ -110,7 +110,10 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                     ),
                   ),
                   const SizedBox(height: 22),
-                  const CustomSubmitButton(titleButton: 'إنشاء حساب'),
+                  CustomSubmitButton(
+                    titleButton: 'إنشاء حساب',
+                    onPressed: () {},
+                  ),
                   const SizedBox(height: 7),
                   CustomTextButtonNav(
                     onPressed: () => GoRouter.of(context).pop(),
