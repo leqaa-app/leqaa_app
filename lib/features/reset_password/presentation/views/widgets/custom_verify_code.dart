@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leqaa/core/utils/color_manager.dart';
 import 'package:leqaa/core/utils/styles.dart';
-import 'package:leqaa/features/auth/presentation/views/widgets/custom_submit_button.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/custom_text_button_nav.dart';
 import 'package:leqaa/features/reset_password/presentation/views/widgets/custom_otp_input_box.dart';
 
@@ -53,10 +52,6 @@ class CustomVerifyCode extends StatelessWidget {
               ),
             ],
           ),
-        ),
-        CustomSubmitButton(
-          titleButton: 'تأكيد',
-          onPressed: () {},
         ),
       ],
     );
