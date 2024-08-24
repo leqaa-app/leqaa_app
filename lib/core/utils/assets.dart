@@ -62,4 +62,8 @@ class Assets {
   /// Assets for imagesPhone
   /// assets/images/phone.svg
   static const String imagesPhone = 'assets/images/phone.svg';
+
+  /// Assets for imageesLockCheck
+  /// assets/images/lock_check.svg
+  static const String imagesLockCheck = 'assets/images/lock_check.svg';
 }

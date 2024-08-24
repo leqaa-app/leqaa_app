@@ -4,6 +4,7 @@ import 'package:leqaa/core/utils/color_manager.dart';
 import 'package:leqaa/core/utils/styles.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/custom_form_text_field.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/custom_submit_button.dart';
+import 'package:leqaa/features/reset_password/presentation/views/widgets/custom_show_dialog.dart';
 
 class NewPasswordViewBody extends StatefulWidget {
   const NewPasswordViewBody({super.key});
@@ -86,10 +87,43 @@ class _NewPasswordViewBodyState extends State<NewPasswordViewBody> {
           const SizedBox(height: 22),
           CustomSubmitButton(
             titleButton: 'تأكيد',
-            onPressed: () {},
+            onPressed: () => customShowDialog(
+              context,
+              title: 'تم تغيير كلمة المرور',
+              description:
+                  'لقد تم تسجيل كلمة المرور الجديدة الخاصة بك. الآن\n .يمكنك الاستمتاع بجميع مزايا تطبيقنا مرة أخرى',
+              delete: 'تم',
+              onPressed: () {},
+            ),
           ),
         ],
       ),
+    );
+  }
+
+  void customShowDialog(
+    BuildContext context, {
+    required void Function() onPressed,
+    required String title,
+    required String description,
+    required String delete,
+    String? cancel,
+    Color? backgroundColor,
+    bool? isReturnBack,
+  }) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return CustomShowDialog(
+          onPressedDelete: onPressed,
+          title: title,
+          description: description,
+          cancel: cancel,
+          backgroundColor: backgroundColor,
+          isReturnBack: isReturnBack,
+          delete: delete,
+        );
+      },
     );
   }
 }

@@ -37,7 +37,7 @@ class CustomFormTextField extends StatelessWidget {
           validator: (data) {
             if (data!.isEmpty) {
               return 'هذا الحقل مطلوب';
-            }
+            } 
             return null;
           },
           onChanged: onChanged,
