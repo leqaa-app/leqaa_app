@@ -107,7 +107,10 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                     const SizedBox(height: 16),
                     CustomSubmitButton(
                       titleButton: 'تسجيل الدخول',
-                      onPressed: () {},
+                      onPressed: () {
+                        GoRouter.of(context)
+                            .push(StringManager.kChooseTypeView);
+                      },
                     ),
                   ],
                 ),

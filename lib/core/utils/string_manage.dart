@@ -6,5 +6,6 @@ class StringManager {
   static const kForgetPasswordView = '/forgetPasswordView';
   static const kVerifyCodeView = '/verifyCodeView';
   static const kNewPasswordView = '/newPasswordView';
+  static const kChooseTypeView = '/ChooseTypeView';
   static const kHomeView = '/homeView';
 }

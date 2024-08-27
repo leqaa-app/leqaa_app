@@ -8,6 +8,7 @@ import 'package:leqaa/features/reset_password/presentation/views/forget_password
 import 'package:leqaa/features/reset_password/presentation/views/new_password_view.dart';
 import 'package:leqaa/features/reset_password/presentation/views/verify_view.dart';
 import 'package:leqaa/features/splash/presentation/views/splash_view.dart';
+import 'package:leqaa/features/university/presentation/views/choose_type_view.dart';
 
 abstract class AppRouter {
   static final router = GoRouter(
@@ -39,6 +40,10 @@ abstract class AppRouter {
       GoRoute(
         path: StringManager.kNewPasswordView,
         builder: (context, state) => const NewPasswordView(),
+      ),
+      GoRoute(
+        path: StringManager.kChooseTypeView,
+        builder: (context, state) => const ChooseTypeView(),
       ),
       GoRoute(
         path: StringManager.kHomeView,
