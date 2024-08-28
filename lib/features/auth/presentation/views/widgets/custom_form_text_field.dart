@@ -9,13 +9,13 @@ class CustomFormTextField extends StatelessWidget {
     this.hinText,
     this.onChanged,
     this.obscureText = false,
-    required this.textTitle,
+    this.textTitle,
     this.icon,
     this.prefixIcon,
   });
 
   final Function(String)? onChanged;
-  final String textTitle;
+  final String? textTitle;
   final String? hinText;
   final String? icon;
   final Widget? prefixIcon;
@@ -26,18 +26,20 @@ class CustomFormTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        Text(
-          textTitle,
-          style:
-              Styles.styleRegular14.copyWith(color: ColorManager.darkGrayColor),
-        ),
-        const SizedBox(height: 8),
+        textTitle == null
+            ? const SizedBox()
+            : Text(
+                textTitle!,
+                style: Styles.styleRegular14
+                    .copyWith(color: ColorManager.darkGrayColor),
+              ),
+        textTitle == null ? const SizedBox() : const SizedBox(height: 8),
         TextFormField(
           obscureText: obscureText!,
           validator: (data) {
             if (data!.isEmpty) {
               return 'هذا الحقل مطلوب';
-            } 
+            }
             return null;
           },
           onChanged: onChanged,

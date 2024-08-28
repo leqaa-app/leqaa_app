@@ -66,4 +66,24 @@ class Assets {
   /// Assets for imageesLockCheck
   /// assets/images/lock_check.svg
   static const String imagesLockCheck = 'assets/images/lock_check.svg';
+
+  /// Assets for imageesAward
+  /// assets/images/award.svg
+  static const String imagesAward = 'assets/images/award.svg';
+
+  /// Assets for imageesBook
+  /// assets/images/book.svg
+  static const String imagesBook = 'assets/images/book.svg';
+
+  /// Assets for imageesTeacher
+  /// assets/images/teacher.svg
+  static const String imagesTeacher = 'assets/images/teacher.svg';
+
+  /// Assets for imageesCalendarEdit
+  /// assets/images/calendar-edit.svg
+  static const String imagesCalendarEdit = 'assets/images/calendar-edit.svg';
+
+  /// Assets for imageesProfileTwoUser
+  /// assets/images/profile-2user.svg
+  static const String imagesProfileTwoUsers = 'assets/images/profile-2user.svg';
 }

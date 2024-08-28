@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leqaa/core/utils/height_values_managers.dart';
-import 'package:leqaa/core/widgets/custom_background_container.dart';
+import 'package:leqaa/core/widgets/custom_app_bar.dart';
 import 'package:leqaa/features/university/presentation/views/widgets/choose_type_view_body.dart';
 
 class ChooseTypeView extends StatelessWidget {
@@ -8,8 +8,8 @@ class ChooseTypeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: CustomBackgroundContainer(
+    return Scaffold(
+      body: CustomAppBar(
         height: HeightValuesManagers.kHeight218,
         iconBack: true,
         logo: true,

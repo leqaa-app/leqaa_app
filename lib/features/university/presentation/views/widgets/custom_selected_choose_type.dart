@@ -3,7 +3,9 @@ import 'package:leqaa/core/utils/assets.dart';
 import 'package:leqaa/features/university/presentation/views/widgets/custom_choose_type_button.dart';
 
 class CustomSelectedChooseType extends StatefulWidget {
-  const CustomSelectedChooseType({super.key});
+  const CustomSelectedChooseType({super.key, required this.onSelectionChanged});
+
+  final Function(bool isStudentSelected) onSelectionChanged;
 
   @override
   State<CustomSelectedChooseType> createState() =>
@@ -17,6 +19,7 @@ class _CustomSelectedChooseTypeState extends State<CustomSelectedChooseType> {
     setState(() {
       isSelected = !isSelected;
     });
+    widget.onSelectionChanged(isSelected);
   }
 
   @override

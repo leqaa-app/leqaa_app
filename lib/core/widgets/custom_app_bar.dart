@@ -7,18 +7,20 @@ import 'package:leqaa/core/utils/height_values_managers.dart';
 import 'package:leqaa/core/utils/radius_values_managers.dart';
 import 'package:leqaa/core/utils/width_values_managers.dart';
 
-class CustomBackgroundContainer extends StatelessWidget {
-  const CustomBackgroundContainer({
+class CustomAppBar extends StatelessWidget {
+  const CustomAppBar({
     super.key,
     required this.child,
     this.height = HeightValuesManagers.kHeight138,
     this.logo = false,
     this.iconBack = false,
+    this.image = Assets.imagesLeqaaLogo,
   });
 
   final Widget child;
   final double? height;
   final bool? logo;
+  final String image;
   final bool? iconBack;
 
   @override
@@ -63,7 +65,7 @@ class CustomBackgroundContainer extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SvgPicture.asset(
-                            Assets.imagesLeqaaLogo,
+                            image,
                             width: WidthValuesManagers.kWidth100,
                             height: HeightValuesManagers.kHeight75,
                           ),
