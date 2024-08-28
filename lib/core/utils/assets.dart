@@ -86,4 +86,8 @@ class Assets {
   /// Assets for imageesProfileTwoUser
   /// assets/images/profile-2user.svg
   static const String imagesProfileTwoUsers = 'assets/images/profile-2user.svg';
+
+  /// Assets for imageesGalleryAdd
+  /// assets/images/gallery-add.svg
+  static const String imagesGalleryAdd = 'assets/images/gallery-add.svg';
 }

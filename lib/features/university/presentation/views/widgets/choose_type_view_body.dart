@@ -14,13 +14,11 @@ class ChooseTypeViewBody extends StatelessWidget {
 
   void _onConfirm(BuildContext context) {
     if (isStudentSelected.value) {
-      // الانتقال إلى صفحة الطالب.
       GoRouter.of(context).push(
-          StringManager.kStudentView); // استخدم المسار المناسب لصفحة الطالب.
+          StringManager.kStudentView);
     } else {
-      // الانتقال إلى صفحة المنظم.
       GoRouter.of(context).push(
-          StringManager.kOrganizerView); // استخدم المسار المناسب لصفحة المنظم.
+          StringManager.kOrganizerView);
     }
   }
 
