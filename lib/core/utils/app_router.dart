@@ -11,6 +11,7 @@ import 'package:leqaa/features/splash/presentation/views/splash_view.dart';
 import 'package:leqaa/features/university/presentation/views/choose_type_view.dart';
 import 'package:leqaa/features/university/presentation/views/organizer_login_view.dart';
 import 'package:leqaa/features/user_profile/presentation/views/student_login_view.dart';
+import 'package:leqaa/features/user_profile/presentation/views/user_interests_view.dart';
 
 abstract class AppRouter {
   static final router = GoRouter(
@@ -54,6 +55,10 @@ abstract class AppRouter {
       GoRoute(
         path: StringManager.kOrganizerView,
         builder: (context, state) => const OrganizerLoginView(),
+      ),
+      GoRoute(
+        path: StringManager.kUserInterestsView,
+        builder: (context, state) => const UserInterestsView(),
       ),
       GoRoute(
         path: StringManager.kHomeView,

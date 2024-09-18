@@ -122,6 +122,8 @@ class _NewPasswordViewBodyState extends State<NewPasswordViewBody> {
           backgroundColor: backgroundColor,
           isReturnBack: isReturnBack,
           delete: delete,
+          iconCircleAvatare: Assets.imagesLockCheck,
+          isIconLoading: true,
         );
       },
     );

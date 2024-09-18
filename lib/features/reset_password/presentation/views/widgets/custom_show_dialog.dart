@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:leqaa/core/utils/assets.dart';
 import 'package:leqaa/core/utils/color_manager.dart';
 import 'package:leqaa/core/utils/font_manager.dart';
 import 'package:leqaa/core/utils/styles.dart';
@@ -15,6 +14,8 @@ class CustomShowDialog extends StatelessWidget {
     this.cancel,
     this.backgroundColor,
     this.isReturnBack = false,
+    this.isIconLoading = false,
+    required this.iconCircleAvatare,
   });
 
   final String title;
@@ -22,6 +23,8 @@ class CustomShowDialog extends StatelessWidget {
   final String? cancel;
   final Color? backgroundColor;
   final bool? isReturnBack;
+  final bool? isIconLoading;
+  final String iconCircleAvatare;
   final String delete;
   final void Function() onPressedDelete;
 
@@ -43,7 +46,7 @@ class CustomShowDialog extends StatelessWidget {
               radius: 57.5,
               backgroundColor: ColorManager.mainColor,
               child: SvgPicture.asset(
-                Assets.imagesLockCheck,
+                iconCircleAvatare,
                 height: 41.93,
                 width: 36.94,
               ),
@@ -64,11 +67,34 @@ class CustomShowDialog extends StatelessWidget {
                 color: ColorManager.mediumGrayColor,
               ),
             ),
-            Image.asset(
-              'assets/images/loading.gif',
-              height: 80,
-              width: 80,
-            ),
+            isIconLoading == true
+                ? Image.asset(
+                    'assets/images/loading.gif',
+                    height: 80,
+                    width: 80,
+                  )
+                : const SizedBox(),
+            isIconLoading == false
+                ? const SizedBox(height: 22)
+                : const SizedBox(),
+            isIconLoading == false
+                ? ElevatedButton(
+                    onPressed: onPressedDelete,
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      minimumSize: const Size(112, 48),
+                      backgroundColor: ColorManager.mainColor,
+                    ),
+                    child: Text(
+                      delete,
+                      style: Styles.styleBold16.copyWith(
+                        color: ColorManager.whiteColor,
+                      ),
+                    ),
+                  )
+                : const SizedBox(),
             // Row(
             //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
             //   children: [

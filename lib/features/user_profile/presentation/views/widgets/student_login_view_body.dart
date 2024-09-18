@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:go_router/go_router.dart';
 import 'package:leqaa/core/utils/color_manager.dart';
+import 'package:leqaa/core/utils/string_manage.dart';
 import 'package:leqaa/core/utils/styles.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/custom_submit_button.dart';
 import 'package:leqaa/features/user_profile/presentation/views/widgets/custom_student_form_fields.dart';
@@ -22,7 +24,9 @@ class StudentLoginViewBody extends StatelessWidget {
           ),
           const CustomStudentFormFields(),
           CustomSubmitButton(
-            onPressed: () {},
+            onPressed: () {
+              GoRouter.of(context).push(StringManager.kUserInterestsView);
+            },
             titleButton: 'تأكيد',
           ),
         ],

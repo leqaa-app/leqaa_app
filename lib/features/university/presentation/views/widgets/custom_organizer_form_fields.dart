@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:leqaa/core/utils/assets.dart';
 import 'package:leqaa/features/auth/presentation/views/widgets/custom_form_text_field.dart';
 
@@ -7,38 +8,51 @@ class CustomOrganizerFormFields extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(vertical: 24),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 24),
       child: Column(
         children: [
-          CustomFormTextField(
+          const CustomFormTextField(
             hinText: 'اسم الجامعه',
             icon: Assets.imagesTeacher,
           ),
-          SizedBox(height: 16),
-          CustomFormTextField(
+          const SizedBox(height: 16),
+          const CustomFormTextField(
             hinText: 'التخصص',
             icon: Assets.imagesBook,
           ),
-          SizedBox(height: 16),
-          CustomFormTextField(
+          const SizedBox(height: 16),
+          const CustomFormTextField(
             hinText: 'ايميل المنظم',
             icon: Assets.imagesEmail,
           ),
-          SizedBox(height: 16),
-          CustomFormTextField(
+          const SizedBox(height: 16),
+          const CustomFormTextField(
             hinText: 'طالب / خريج',
             icon: Assets.imagesTeacher,
           ),
-          SizedBox(height: 16),
-          CustomFormTextField(
+          const SizedBox(height: 16),
+          const CustomFormTextField(
             hinText: 'رقم الهاتف',
             icon: Assets.imagesPhone,
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           CustomFormTextField(
             hinText: 'صوره كارنيه الجامعه',
             icon: Assets.imagesGalleryAdd,
+            prefixIcon: GestureDetector(
+              onTap: () {},
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SvgPicture.asset(
+                    Assets.imagesDirectSend,
+                    height: 24,
+                    width: 24,
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
       ),

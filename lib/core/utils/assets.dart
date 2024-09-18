@@ -90,4 +90,8 @@ class Assets {
   /// Assets for imageesGalleryAdd
   /// assets/images/gallery-add.svg
   static const String imagesGalleryAdd = 'assets/images/gallery-add.svg';
+
+  /// Assets for imageesDirectSend
+  /// assets/images/direct-send.svg
+  static const String imagesDirectSend = 'assets/images/direct-send.svg';
 }

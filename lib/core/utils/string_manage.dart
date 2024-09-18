@@ -9,5 +9,6 @@ class StringManager {
   static const kChooseTypeView = '/ChooseTypeView';
   static const kStudentView = '/studentPage';
   static const kOrganizerView = '/organizerPage';
+  static const kUserInterestsView = '/userInterestsView';
   static const kHomeView = '/homeView';
 }
